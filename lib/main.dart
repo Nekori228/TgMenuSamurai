@@ -151,335 +151,355 @@ class questionsProfilePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     margin: EdgeInsets.symmetric(
-                        horizontal: MediaQuery.of(context).size.width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            SizedBox(
-                              width: 200,
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xFFF1F2F2)),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10),
+                        horizontal: MediaQuery.of(context).size.width * 0.01),
+                    child: Container(
+                      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              SizedBox(
+                                width: 120,
+                                height: 380,
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Color(0xFFF1F2F2)),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10),
+                                    ),
                                   ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Image.asset(image[index]['photo']!),
-                                    Container(
-                                      margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                                      child: Text(
-                                        listQuestion[index]['title']!,
-                                        style: TextStyle(
+                                  child: Column(
+                                    children: [
+                                      Image.asset(image[index]['photo']!),
+                                      Container(
+                                        margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                                        child: Text(
+                                          listQuestion[index]['title']!,
+                                          style: TextStyle(
                                             color: const Color(0xFFBF2631),
                                             fontSize: 18,
-                                            fontWeight: FontWeight.w800),
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
-                                      child: Text(
-                                        listQuestion[index]['description']!,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            color: const Color(0xFF323232),
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color: Color(0xFFF1F2F2),
+                                            fontFamily: 'Exo2-Bold',
                                           ),
                                         ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                                'assets/images/icon-scales.png'),
-                                            SizedBox(width: 5),
-                                            Text(
-                                              listQuestion[index]['weight']!,
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
+                                        child: Text(
+                                          listQuestion[index]['description']!,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xFF323232),
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Color(0xFFF1F2F2),
+                                            ),
+                                          ),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                  'assets/images/icon-scales.png'),
+                                              SizedBox(width: 5),
+                                              Text(
+                                                listQuestion[index]['weight']!,
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color:
+                                                        const Color(0xFF323232),
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.w500),
+                                              ),
+                                            ],
+                                          )),
+                                      SizedBox(
+                                        width: double.infinity,
+                                        child: Container(
+                                          color: Color(0xFFF1F2F2),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                margin: EdgeInsets.all(10),
+                                                child: Text(
+                                                  listQuestion[index]['price']!,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                      color:
+                                                          const Color(0xFF323232),
+                                                      fontSize: 20,
+                                                      fontFamily: 'Exo2-Bold'),
+                                                ),
+                                              ),
+                                              Container(
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0, 0, 0, 10),
+                                                child: ElevatedButton(
+                                                  onPressed: () {},
+                                                  style: ElevatedButton.styleFrom(
+                                                      primary: Color(0xFF39A531)),
+                                                  child: Text('КУПИТЬ'),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    width: 120,
+                                    height: 380,
+                                    child: Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: Color(0xFFF1F2F2)),
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Image.asset(image2[index]['photo']!),
+                                          Container(
+                                            margin:
+                                                EdgeInsets.fromLTRB(0, 20, 0, 10),
+                                            child: Text(
+                                              listQuestion2[index]['title']!,
+                                              style: TextStyle(
+                                                color: const Color(0xFFBF2631),
+                                                fontSize: 18,
+                                                fontFamily: 'Exo2-Bold',
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            margin:
+                                                EdgeInsets.fromLTRB(0, 0, 0, 15),
+                                            child: Text(
+                                              listQuestion2[index]
+                                                  ['description']!,
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                  color:
-                                                      const Color(0xFF323232),
+                                                  color: const Color(0xFF323232),
                                                   fontSize: 13,
                                                   fontWeight: FontWeight.w500),
                                             ),
-                                          ],
-                                        )),
-                                    Container(
-                                      color: Color(0xFFF1F2F2),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            margin: EdgeInsets.fromLTRB(
-                                                10, 10, 0, 10),
-                                            child: Text(
-                                              listQuestion[index]['price']!,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  color:
-                                                      const Color(0xFF323232),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500),
-                                            ),
                                           ),
+                                          Spacer(),
                                           Container(
-                                            margin: EdgeInsets.fromLTRB(
-                                                0, 10, 10, 10),
-                                            child: ElevatedButton(
-                                              onPressed: () {},
-                                              style: ElevatedButton.styleFrom(
-                                                  primary: Color(0xFF39A531)),
-                                              child: Text('КУПИТЬ'),
+                                              decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Color(0xFFF1F2F2),
+                                                ),
+                                              ),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                      'assets/images/icon-scales.png'),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                    listQuestion2[index]
+                                                        ['weight']!,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        color: const Color(
+                                                            0xFF323232),
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                ],
+                                              )),
+                                          SizedBox(
+                                            width: double.infinity,
+                                            child: Container(
+                                              color: Color(0xFFF1F2F2),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.all(10),
+                                                    child: Text(
+                                                      listQuestion[index]
+                                                          ['price']!,
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                          color: const Color(
+                                                              0xFF323232),
+                                                          fontSize: 20,
+                                                          fontFamily:
+                                                              'Exo2-Bold'),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        0, 0, 0, 10),
+                                                    child: ElevatedButton(
+                                                      onPressed: () {},
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                              primary: Color(
+                                                                  0xFF39A531)),
+                                                      child: Text('КУПИТЬ'),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Column(
-                              children: [
-                                SizedBox(
-                                  width: 200,
-                                  child: Container(
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: Color(0xFFF1F2F2)),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10),
+                            ],
+                          ),
+                          SizedBox(width: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    width: 120,
+                                    height: 380,
+                                    child: Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: Color(0xFFF1F2F2)),
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
                                       ),
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(image2[index]['photo']!),
-                                        Container(
-                                          margin:
-                                              EdgeInsets.fromLTRB(0, 20, 0, 10),
-                                          child: Text(
-                                            listQuestion2[index]['title']!,
-                                            style: TextStyle(
+                                      child: Column(
+                                        children: [
+                                          Image.asset(image3[index]['photo']!),
+                                          Container(
+                                            margin:
+                                                EdgeInsets.fromLTRB(0, 20, 0, 10),
+                                            child: Text(
+                                              listQuestion3[index]['title']!,
+                                              style: TextStyle(
                                                 color: const Color(0xFFBF2631),
                                                 fontSize: 18,
-                                                fontWeight: FontWeight.w800),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin:
-                                              EdgeInsets.fromLTRB(0, 0, 0, 15),
-                                          child: Text(
-                                            listQuestion2[index]
-                                                ['description']!,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                color: const Color(0xFF323232),
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                        ),
-                                        Container(
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                color: Color(0xFFF1F2F2),
+                                                fontFamily: 'Exo2-Bold',
                                               ),
                                             ),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                    'assets/images/icon-scales.png'),
-                                                SizedBox(width: 5),
-                                                Text(
-                                                  listQuestion2[index]
-                                                      ['weight']!,
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: const Color(
-                                                          0xFF323232),
-                                                      fontSize: 13,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ],
-                                            )),
-                                        Container(
-                                          color: Color(0xFFF1F2F2),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                margin: EdgeInsets.fromLTRB(
-                                                    10, 10, 0, 10),
-                                                child: Text(
-                                                  listQuestion[index]['price']!,
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: const Color(
-                                                          0xFF323232),
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ),
-                                              Container(
-                                                margin: EdgeInsets.fromLTRB(
-                                                    0, 10, 10, 10),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          primary: Color(
-                                                              0xFF39A531)),
-                                                  child: Text('КУПИТЬ'),
-                                                ),
-                                              ),
-                                            ],
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Column(
-                              children: [
-                                SizedBox(
-                                  width: 200,
-                                  child: Container(
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: Color(0xFFF1F2F2)),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10),
+                                          Container(
+                                            margin:
+                                                EdgeInsets.fromLTRB(0, 0, 0, 15),
+                                            child: Text(
+                                              listQuestion3[index]
+                                                  ['description']!,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: const Color(0xFF323232),
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w500),
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          Container(
+                                              decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Color(0xFFF1F2F2),
+                                                ),
+                                              ),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                      'assets/images/icon-scales.png'),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                    listQuestion3[index]
+                                                        ['weight']!,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        color: const Color(
+                                                            0xFF323232),
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                ],
+                                              )),
+                                          SizedBox(
+                                            width: double.infinity,
+                                            child: Container(
+                                              color: Color(0xFFF1F2F2),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.all(10),
+                                                    child: Text(
+                                                      listQuestion3[index]
+                                                          ['price']!,
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                          color: const Color(
+                                                              0xFF323232),
+                                                          fontSize: 20,
+                                                          fontFamily:
+                                                              'Exo2-Bold'),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        0, 0, 0, 10),
+                                                    child: ElevatedButton(
+                                                      onPressed: () {},
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                              primary: Color(
+                                                                  0xFF39A531)),
+                                                      child: Text('КУПИТЬ'),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(image3[index]['photo']!),
-                                        Container(
-                                          margin:
-                                              EdgeInsets.fromLTRB(0, 20, 0, 10),
-                                          child: Text(
-                                            listQuestion2[index]['title']!,
-                                            style: TextStyle(
-                                                color: const Color(0xFFBF2631),
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w800),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin:
-                                              EdgeInsets.fromLTRB(0, 0, 0, 15),
-                                          child: Text(
-                                            listQuestion2[index]
-                                                ['description']!,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                color: const Color(0xFF323232),
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                        ),
-                                        Container(
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                color: Color(0xFFF1F2F2),
-                                              ),
-                                            ),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                    'assets/images/icon-scales.png'),
-                                                SizedBox(width: 5),
-                                                Text(
-                                                  listQuestion2[index]
-                                                      ['weight']!,
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: const Color(
-                                                          0xFF323232),
-                                                      fontSize: 13,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ],
-                                            )),
-                                        Container(
-                                          color: Color(0xFFF1F2F2),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                margin: EdgeInsets.fromLTRB(
-                                                    10, 10, 0, 10),
-                                                child: Text(
-                                                  listQuestion[index]['price']!,
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: const Color(
-                                                          0xFF323232),
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ),
-                                              Container(
-                                                margin: EdgeInsets.fromLTRB(
-                                                    0, 10, 10, 10),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          primary: Color(
-                                                              0xFF39A531)),
-                                                  child: Text('КУПИТЬ'),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
